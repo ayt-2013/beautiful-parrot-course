@@ -1,0 +1,16 @@
+title: Beautiful Parrot
+description: I have a repository in GitHub called Beautiful Parrot
+template:
+  repo: beautiful-parrot-template
+  name: beautiful-parrot
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
